@@ -71,8 +71,7 @@ def download_apk(app):
     subprocess.run(["jadx", f"{app_id}.apk"], check=True)
     search(app_id)
 
-def search(app):
-    #grep -R 'httpd' .
+def search(app): 
 
     cprint(f"Started searchin for 'login' keyword", "green", attrs=["bold"])
 
@@ -87,6 +86,7 @@ def search(app):
 def main():
     # check if ANDROID_HOME is set
     global ANDROID_HOME
+    global apps
     try:
         ANDROID_HOME = os.environ["ANDROID_HOME"]
     except KeyError:
