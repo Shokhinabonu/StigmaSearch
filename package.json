@@ -1,0 +1,19 @@
+{
+  "name": "stigmasearch",
+  "version": "1.0.0",
+  "description": "Search for Stigma",
+  "main": "app_id_scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shokhinabonu/StigmaSearch.git"
+  },
+  "author": "Shokhinabonu Tojieva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shokhinabonu/StigmaSearch/issues"
+  },
+  "homepage": "https://github.com/Shokhinabonu/StigmaSearch#readme"
+}
