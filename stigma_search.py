@@ -113,8 +113,8 @@ def main():
     #     subprocess.run(["mkdir", f"{MODIFIED_APK_PATH}"])
     #     cprint("Created modified apk directory", "green", attrs=["bold"])
 
-    for app in apps:
-        download_apk(app)
+    # for app in apps:
+    #     download_apk(app)
 
         
 
