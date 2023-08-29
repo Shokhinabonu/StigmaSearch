@@ -50,26 +50,26 @@ def extract_xapk(app_id):
 # uses apkeep to download apk
 def download_apk(app):
     app_id = get_app_id(app)
-    if not app_id:
-        cprint(f"Error getting app id for {app}", "red", attrs=["bold"])
-        return
+    # if not app_id:
+    #     cprint(f"Error getting app id for {app}", "red", attrs=["bold"])
+    #     return
 
-    cprint(f"Found app: {app}", "green", attrs=["bold"])
+    # cprint(f"Found app: {app}", "green", attrs=["bold"])
 
-    if app_exists(app_id): 
-        return
+    # if app_exists(app_id): 
+    #     return
 
-    cprint("Downloading with apkeep...", "green", attrs=["bold"])
-    subprocess.run(["apkeep", "-a", app_id, APK_PATH], check=True)
+    # cprint("Downloading with apkeep...", "green", attrs=["bold"])
+    # subprocess.run(["apkeep", "-a", app_id, APK_PATH], check=True)
 
-    # check if xapk file
-    extract_xapk(app_id)
+    # # check if xapk file
+    # extract_xapk(app_id)
 
-    cprint(f"Done downloading {app}", "green", attrs=["bold"])
+    # cprint(f"Done downloading {app}", "green", attrs=["bold"])
 
-    # start converting
-    subprocess.run(["jadx", f"{app_id}.apk"], check=True)
-    search(app_id)
+    # # start converting
+    # subprocess.run(["jadx", f"{app_id}.apk"], check=True)
+    # search(app_id)
 
 def search(app): 
 
@@ -113,8 +113,8 @@ def main():
     #     subprocess.run(["mkdir", f"{MODIFIED_APK_PATH}"])
     #     cprint("Created modified apk directory", "green", attrs=["bold"])
 
-    # for app in apps:
-    #     download_apk(app)
+    for app in apps:
+        download_apk(app)
 
         
 
