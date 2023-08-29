@@ -1,6 +1,6 @@
-import { search } from 'google-play-scraper';
+const gplay = require('google-play-scraper');
 
-search({
+gplay.search({
     term: process.argv[2],
     num: 1
 })
