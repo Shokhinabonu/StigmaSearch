@@ -1,6 +1,7 @@
 {
   "name": "stigmasearch",
   "version": "1.0.0",
+  "type":"module",
   "description": "Search for Stigma",
   "main": "app_id_scripts.js",
   "scripts": {
