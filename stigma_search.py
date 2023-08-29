@@ -86,7 +86,7 @@ def search(app):
 def main():
     # check if ANDROID_HOME is set
     global ANDROID_HOME
-    global apps
+    
     try:
         ANDROID_HOME = os.environ["ANDROID_HOME"]
     except KeyError:
@@ -101,9 +101,9 @@ def main():
 
 
     # set apps
-        cprint("Enter the names of the apps you want to download, separated by comma:", "green", attrs=["bold"], end=" ")
-        apps = input().split(",")
-        apps = [app.strip() for app in apps]
+    cprint("Enter the names of the apps you want to download, separated by comma:", "green", attrs=["bold"], end=" ")
+    apps = input().split(",")
+    apps = [app.strip() for app in apps]
 
     if not os.path.exists(f"{APK_PATH}"):
         subprocess.run(["mkdir", f"{APK_PATH}"])
